@@ -1,0 +1,2138 @@
+server:
+    bind:
+        host: 0.0.0.0
+        port: 80
+    url: http://localhost/
+    mimetype: application/json; charset=UTF-8
+    encoding: utf-8
+    gzip: false
+    language: en-US
+    cors: true
+    pretty_print: true
+    limit: 10
+    map:
+        url: https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>
+            contributors'
+    admin: true
+    templates:
+        path: /pygeoapi/pygeoapi/templates
+logging:
+    level: ERROR
+metadata:
+    identification:
+        title: pygeoapi eMOTIONAL Cities instance
+        description: Provides an API to eMOTIONAL Cities geospatial data
+        keywords:
+        - geospatial
+        - data
+        - api
+        - eMOTIONAL Cities
+        - Neuroscience
+        - Urban Planning
+        - H2020
+        keywords_type: theme
+        terms_of_service: https://creativecommons.org/licenses/by/4.0/
+        url: http://example.org
+    license:
+        name: CC-BY 4.0 license
+        url: https://creativecommons.org/licenses/by/4.0/
+    provider:
+        name: ByteRoad
+        url: https://byteroad.net
+    contact:
+        name: ByteRoad
+        position: Maintainer
+        address: R. Ricardo Espirito Santo
+        city: Lisbon
+        stateorprovince: Lisbon
+        postalcode: 1170-007
+        country: Portugal
+        phone: +xx-xxx-xxx-xxxx
+        fax: +xx-xxx-xxx-xxxx
+        email: info@byteroad.net
+        url: https://byteroad.net
+        hours: Hours of Service
+        instructions: During hours of service.  Off on weekends.
+        role: pointOfContact
+resources:
+    lansing_city_block_group_areadeprivationindex_nationalscore_2020:
+        type: collection
+        title: Area Deprivation Index-National
+        description: Area Deprivation Index national score in 2020. The Area Deprivation
+            Index (ADI) ranks neighborhoods on the basis of socioeconomic disadvantage
+            in the areas of income, education, employment, and housing quality. Areas
+            with greater disadvantage are ranked higher. National scores are normalized
+            to the whole country, and state scores are normalized to a particular
+            state. Higher Area Deprivation Index scores have been shown to correlate
+            with worse health outcomes in measures such as life expectancy. This index
+            was created by researchers at the University of Wisconsin-Madison based
+            on a methodology originally developed by the Health Resources and Services
+            Administration. Areas on this map are ranked against all other areas in
+            the nation. National scores represent percentiles. In other words, they
+            are divided into 100 groups of the same size, where 1 is the lowest rate
+            of disadvantage and 100 is the highest.
+        keywords:
+        - Area Deprivation Index
+        - Lansing
+        - USA
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lansing_city_block_group_areadeprivationindex_nationalscore_2020
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -84.61528312089224
+                - 42.655510004126654
+                - -84.49916050045216
+                - 42.769793884562326
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lansing_city_block_group_areadeprivationindex_nationalscore_2020
+            id_field: id
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lansing_city_block_group_areadeprivationindex_nationalscore_2020/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 15
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lansing_city_census_tracts_numberofpeoplebiketowork_2020:
+        type: collection
+        title: Number of People Travel by Bicycle to Work
+        description: Number of workers age 16 years or older who did not work at home
+            who commuted to work by bicycle in 2017-2021. Percentage calculations
+            are suppressed in cases where the denominator of the calculation was less
+            than 10 of the unit that is being described (e.g., households, people,
+            householders, etc.).
+        keywords:
+        - Bike to Work
+        - Lansing
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lansing_city_census_tracts_numberofpeoplebiketowork_2020
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -84.61528312089224
+                - 42.655510004126654
+                - -84.49916050045216
+                - 42.769793884562326
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lansing_city_census_tracts_numberofpeoplebiketowork_2020
+            id_field: id
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lansing_city_census_tracts_numberofpeoplebiketowork_2020/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 15
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lansing_city_census_tracts_percentageofpeoplebiketowork_2020:
+        type: collection
+        title: Percent of People Travel by Bicycle to Work
+        description: Estimated percent of workers age 16 years or older who did not
+            work at home who commuted to work by bicycle in 2017-2021. Percentage
+            calculations are suppressed in cases where the denominator of the calculation
+            was less than 10 of the unit that is being described (e.g., households,
+            people, householders, etc.).
+        keywords:
+        - Bike to Work
+        - Lansing
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lansing_city_census_tracts_percentageofpeoplebiketowork_2020
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -84.61528312089224
+                - 42.655510004126654
+                - -84.49916050045216
+                - 42.769793884562326
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lansing_city_census_tracts_percentageofpeoplebiketowork_2020
+            id_field: id
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lansing_city_census_tracts_percentageofpeoplebiketowork_2020/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 15
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_life_births_rate:
+        type: collection
+        title: Life births rate
+        description: Life births rate in 2021, per 1000 inhabitants.
+        keywords:
+        - life births
+        - urban health
+        - health
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_life_births_rate
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_life_births_rate
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_life_births_rate/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_mortality_rate:
+        type: collection
+        title: Mortality rate
+        description: Mortality rate in 2021, per 1000 inhabitants.
+        keywords:
+        - mortality
+        - urban health
+        - health
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_mortality_rate
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_mortality_rate
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_mortality_rate/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_patients_diabetes_mellitus:
+        type: collection
+        title: Prevalence of patients with Diabetes Mellitus
+        description: Prevalence of patients with Diabetes Mellitus in June 2022, by
+            percentage.
+        keywords:
+        - diabetes
+        - urban health
+        - health
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_patients_diabetes_mellitus
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_patients_diabetes_mellitus
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_patients_diabetes_mellitus/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_patients_chronic_alcohol_abuse:
+        type: collection
+        title: Prevalence of patients with chronic alcohol abuse
+        description: Prevalence of patients with chronic alcohol abuse in June 2022,
+            by percentage.
+        keywords:
+        - alcohol
+        - urban health
+        - health
+        - life style
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_patients_chronic_alcohol_abuse
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_patients_chronic_alcohol_abuse
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_patients_chronic_alcohol_abuse/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_patients_tobacco_abuse:
+        type: collection
+        title: Prevalence of patients with tobacco abuse
+        description: Prevalence of patients with tobacco abuse in June 2022, by percentage.
+        keywords:
+        - tobacco
+        - urban health
+        - health
+        - life style
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_patients_tobacco_abuse
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_patients_tobacco_abuse
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_patients_tobacco_abuse/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_patients_obesity:
+        type: collection
+        title: Prevalence of patients with obesity
+        description: Prevalence of patients with obesity in June 2022, by percentage.
+        keywords:
+        - obesity
+        - urban health
+        - health
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_patients_obesity
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_patients_obesity
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_patients_obesity/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_patients_hypertension:
+        type: collection
+        title: Prevalence of patients with hypertension
+        description: Prevalence of patients with hypertension in June 2022, by percentage.
+        keywords:
+        - hypertension
+        - urban health
+        - health
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_patients_hypertension
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_patients_hypertension
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_patients_hypertension/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_patients_dementia:
+        type: collection
+        title: Prevalence of patients diagnosed with dementia
+        description: Prevalence of patients diagnosed with dementia in June 2022,
+            by percentage.
+        keywords:
+        - dementia
+        - urban health
+        - mental health
+        - Lisbon
+        - IGOT
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_patients_dementia
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_patients_dementia
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_patients_dementia/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_positive_tweets_density:
+        type: collection
+        title: Positive tweets
+        description: Total of positive tweets between 2018 and 2021.
+        keywords:
+        - Lisbon
+        - eMOTIONAL Cities
+        - sentiment
+        - Twitter
+        - social media
+        - IGOT
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_positive_tweets_density
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_positive_tweets_density
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_positive_tweets_density/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_unemployed_people_ratio:
+        type: collection
+        title: Unemployed people ratio
+        description: Ratio of unemployed people in 2021, by percentage.
+        keywords:
+        - urban design
+        - urban planning
+        - urban determinants
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_unemployed_people_ratio
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_unemployed_people_ratio
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_unemployed_people_ratio/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_low_literacy_level_ratio:
+        type: collection
+        title: People with low literacy level ratio
+        description: Ratio of people with low education level (up to 9th grade) in
+            2021, by percentage.
+        keywords:
+        - urban design
+        - urban planning
+        - urban determinants
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_low_literacy_level_ratio
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_low_literacy_level_ratio
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_low_literacy_level_ratio/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_population_density:
+        type: collection
+        title: Population density
+        description: Population density in 2021, per hectare.
+        keywords:
+        - urban design
+        - urban planning
+        - urban determinants
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_population_density
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_population_density
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_population_density/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_gender_ratio:
+        type: collection
+        title: Gender ratio
+        description: Number of males per 100 females in 2021.
+        keywords:
+        - urban design
+        - urban planning
+        - urban determinants
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_gender_ratio
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_gender_ratio
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_gender_ratio/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_youth_people_ratio:
+        type: collection
+        title: Youth people ratio
+        description: Ratio of youth people (with 0 to 24 years) in 2021, by percentage.
+        keywords:
+        - social determinants
+        - urban design
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_youth_people_ratio
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_youth_people_ratio
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_youth_people_ratio/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_elderly_people_ratio:
+        type: collection
+        title: Elderly people ratio
+        description: Ratio of elderly people (with 65 or more years) in 2021, by percentage.
+        keywords:
+        - social determinants
+        - urban design
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_elderly_people_ratio
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_elderly_people_ratio
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_elderly_people_ratio/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_average_age_buildings:
+        type: collection
+        title: Average age of buildings
+        description: Average age of buildings constructed between 1919 and 2021, in
+            2021.
+        keywords:
+        - built environment
+        - urban design
+        - urban fabric
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_average_age_buildings
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_average_age_buildings
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_average_age_buildings/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_building_repair_needs_ratio:
+        type: collection
+        title: Buildings with repair needs ratio
+        description: Ratio of buildings with repair needs in 2021, by percentage.
+        keywords:
+        - built environment
+        - urban design
+        - urban fabric
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_building_repair_needs_ratio
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_building_repair_needs_ratio
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_building_repair_needs_ratio/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_walkability:
+        type: collection
+        title: Walkability index
+        description: It is composed by the following indicators, intersection density
+            (in 2016, per hectare); mean slope of streets (in meters), urhan vibrancy
+            (in 2023, by points of interest diversity); sports, leisure and green
+            urban space ratio (in 2018, in percentage); accomodation density (in 2021,
+            per hectare).
+        keywords:
+        - urban design
+        - urban morphology
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_walkability
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_walkability
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_walkability/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_altimetry:
+        type: collection
+        title: Altimetry
+        description: Altimetry level in meters.
+        keywords:
+        - urban design
+        - urban morphology
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_altimetry
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_altimetry
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_altimetry/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_beds_tourist_accomodations:
+        type: collection
+        title: Beds - customers in tourist accommodations
+        description: Beds / customers in tourist accommodations in 2021, per 1000
+            inhabitants.
+        keywords:
+        - urban density
+        - urban design
+        - urban planning
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_beds_tourist_accomodations
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_beds_tourist_accomodations
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_beds_tourist_accomodations/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_fast_food_outlets_density:
+        type: collection
+        title: Density of fast-food outlets
+        description: Kernal density of fast-food outlets (from 100 Montaditos, Burger
+            King, Burger Ranch, Domino's Pizza, McDonald's, Pizza Hut, Telepizza,
+            KFC, Taco Bell, Subway, Pans & Company, and Papa John's chains) in march
+            2022.
+        keywords:
+        - urban planning
+        - urban health
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_fast_food_outlets_density
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_fast_food_outlets_density
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_fast_food_outlets_density/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_ndvi:
+        type: collection
+        title: Normalized Difference Vegetation Index (NDVI)
+        description: Mean, in 2021, of Normalized Difference Vegetation Index (NDVI).
+        keywords:
+        - green
+        - urban
+        - green areas
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_ndvi
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_ndvi
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_ndvi/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_noise:
+        type: collection
+        title: Noise level
+        description: Mean noise level during the day, afternoon and night (Lden) in
+            2021, in weighted decibel.
+        keywords:
+        - pollution
+        - noise
+        - noise pollution
+        - urban planning
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_noise
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_noise
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_noise/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_pm2_5:
+        type: collection
+        title: Particulate Matter (PM2.5)
+        description: Mean, in 2021, of particulate matter with less than 2.5 micrometers
+            in diameter, in micrograms per cubic meter air.
+        keywords:
+        - air pollution
+        - pollution
+        - air quality
+        - urban planning
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_pm2_5
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_pm2_5
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_pm2_5/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_temperature:
+        type: collection
+        title: Mean temperature
+        description: Mean temperature in the warmest months of 2017 (June and August),
+            in Celsius degrees.
+        keywords:
+        - weather
+        - urban climate
+        - urban comfort
+        - climate change
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_temperature
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_temperature
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_temperature/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_vulnerability_excessive_heat:
+        type: collection
+        title: Vulnerability to excessive heat index
+        description: Actual vulnerability to excessive heat index, from "inexistent"
+            to "high" risk.
+        keywords:
+        - weather
+        - urban climate
+        - urban comfort
+        - climate change
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_vulnerability_excessive_heat
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_vulnerability_excessive_heat
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_vulnerability_excessive_heat/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_vulnerability_flash_floods:
+        type: collection
+        title: Vulnerability to flash floods index
+        description: Actual vulnerability to flash floods index, from "very low" to
+            "high" risk.
+        keywords:
+        - weather
+        - urban climate
+        - urban comfort
+        - climate change
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_vulnerability_flash_floods
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_vulnerability_flash_floods
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_vulnerability_flash_floods/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_no2:
+        type: collection
+        title: Nitrogen Dioxide (NO2)
+        description: Mean, in 2020, of nitrogen dioxide, in parts per billion by volume.
+        keywords:
+        - air pollution
+        - pollution
+        - air quality
+        - urban planning
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_no2
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_no2
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_no2/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_distance_green_spaces:
+        type: collection
+        title: Distance to green spaces
+        description: Distance to green spaces up to 300m linear distance.
+        keywords:
+        - green
+        - urban
+        - green areas
+        - IGOT
+        - Lisbon
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_distance_green_spaces
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_distance_green_spaces
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_distance_green_spaces/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_patients_anxiety_disorder:
+        type: collection
+        title: Patients diagnosed with anxiety disorder
+        description: Prevalence of patients diagnosed with anxiety disorder in June
+            2022, by percentage.
+        keywords:
+        - anxiety
+        - urban health
+        - mental health
+        - Lisbon
+        - IGOT
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_patients_anxiety_disorder
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_patients_anxiety_disorder
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_patients_anxiety_disorder/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_patients_depressive_disorder:
+        type: collection
+        title: Patients diagnosed with depressive disorder
+        description: Prevalence of patients diagnosed with depressive disorder in
+            June 2022, by percentage.
+        keywords:
+        - depression
+        - urban health
+        - mental health
+        - Lisbon
+        - IGOT
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_patients_depressive_disorder
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.229835564339478
+                - 38.69139933303907
+                - -9.08738707964508
+                - 38.79675969109248
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_patients_depressive_disorder
+            id_field: FID
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_patients_depressive_disorder/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    air_pollution_wzones:
+        type: collection
+        title: Air pollution data for the zones considered in the greater Copenhagen
+        description: This dataset contains air pollution data for the zones considered
+            in the greater copenhagen spatial analysis report. The data consists of
+            PM2.5, PM10, NO2, Black carbon, and the number of particles as mean values
+            aggregated over the zones.
+        keywords:
+        - air pollution
+        - pollution
+        - air quality
+        - urban planning
+        - DTU
+        - Copenhagen
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/air_pollution_wzones
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - 12.381391
+                - 55.628128
+                - 12.756025
+                - 55.785972
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/air_pollution_wzones
+            id_field: zoneid
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/air_pollution_wzones/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    dst_2012_wzones:
+        type: collection
+        title: Demographic and health 2012
+        description: The demographic and health data for the zones used in spatial
+            analysis acquired from Danish Statistics. Year 2012
+        keywords:
+        - urban health
+        - health
+        - DTU
+        - Copenhagen
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/dst_2012_wzones
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - 12.381391
+                - 55.628128
+                - 12.756025
+                - 55.785972
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/dst_2012_wzones
+            id_field: zoneid
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/dst_2012_wzones/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    dst_2013_wzones:
+        type: collection
+        title: Demographic and health 2013
+        description: The demographic and health data for the zones used in spatial
+            analysis acquired from Danish Statistics. Year 2013
+        keywords:
+        - urban health
+        - health
+        - DTU
+        - Copenhagen
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/dst_2013_wzones
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - 12.381391
+                - 55.628128
+                - 12.756025
+                - 55.785972
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/dst_2013_wzones
+            id_field: zoneid
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/dst_2013_wzones/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    dst_2014_wzones:
+        type: collection
+        title: Demographic and health 2014
+        description: The demographic and health data for the zones used in spatial
+            analysis acquired from Danish Statistics. Year 2014
+        keywords:
+        - urban health
+        - health
+        - DTU
+        - Copenhagen
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/dst_2014_wzones
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - 12.381391
+                - 55.628128
+                - 12.756025
+                - 55.785972
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/dst_2014_wzones
+            id_field: zoneid
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/dst_2014_wzones/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    dst_2015_wzones:
+        type: collection
+        title: Demographic and health 2015
+        description: The demographic and health data for the zones used in spatial
+            analysis acquired from Danish Statistics. Year 2015
+        keywords:
+        - urban health
+        - health
+        - DTU
+        - Copenhagen
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/dst_2015_wzones
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - 12.381391
+                - 55.628128
+                - 12.756025
+                - 55.785972
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/dst_2015_wzones
+            id_field: zoneid
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/dst_2015_wzones/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    dst_2016_wzones:
+        type: collection
+        title: Demographic and health 2016
+        description: The demographic and health data for the zones used in spatial
+            analysis acquired from Danish Statistics. Year 2016
+        keywords:
+        - urban health
+        - health
+        - DTU
+        - Copenhagen
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/dst_2016_wzones
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - 12.381391
+                - 55.628128
+                - 12.756025
+                - 55.785972
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/dst_2016_wzones
+            id_field: zoneid
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/dst_2016_wzones/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    dst_2017_wzones:
+        type: collection
+        title: Demographic and health 2017
+        description: The demographic and health data for the zones used in spatial
+            analysis acquired from Danish Statistics. Year 2017
+        keywords:
+        - urban health
+        - health
+        - DTU
+        - Copenhagen
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/dst_2017_wzones
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - 12.381391
+                - 55.628128
+                - 12.756025
+                - 55.785972
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/dst_2017_wzones
+            id_field: zoneid
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/dst_2017_wzones/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    dst_2018_wzones:
+        type: collection
+        title: Demographic and health 2018
+        description: The demographic and health data for the zones used in spatial
+            analysis acquired from Danish Statistics. Year 2018
+        keywords:
+        - urban health
+        - health
+        - DTU
+        - Copenhagen
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/dst_2018_wzones
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - 12.381391
+                - 55.628128
+                - 12.756025
+                - 55.785972
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/dst_2018_wzones
+            id_field: zoneid
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/dst_2018_wzones/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    landuse_poi_wzones:
+        type: collection
+        title: Land Use and POIs for Copenhagen
+        description: OpenStreetMap (OSM) POI and land-use data extracted and aggregated
+            for each of the zones in the Copenhagen area.
+        keywords:
+        - land use
+        - POI
+        - urban planning
+        - DTU
+        - Copenhagen
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/landuse_poi_wzones
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - 12.381391
+                - 55.628128
+                - 12.756025
+                - 55.785972
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/landuse_poi_wzones
+            id_field: zoneid
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/landuse_poi_wzones/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    zones:
+        type: collection
+        title: Spatial Zones for the greater Copenhagen Area
+        description: This file contains the Polygons of the zones used in the greater
+            copenhagen area and a zone id for each zone.
+        keywords:
+        - zones
+        - traffic zones
+        - DTU
+        - Copenhagen
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/zones
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - 12.381391
+                - 55.628128
+                - 12.756025
+                - 55.785972
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/zones
+            id_field: zoneid
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/zones/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    noise_wzones:
+        type: collection
+        title: Noise data for the zones considered in the greater Copenhagen
+        description: Mean of the total noise levels for each noise point within that
+            particular zone.
+        keywords:
+        - noise
+        - pollution
+        - urban planning
+        - DTU
+        - Copenhagen
+        - eMOTIONAL Cities
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/noise_wzones
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - 12.381391
+                - 55.628128
+                - 12.756025
+                - 55.785972
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/noise_wzones
+            id_field: zoneid
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/noise_wzones/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    lisbon_agudo_sub-oe109003:
+        type: collection
+        title: 'Lisbon Outdoor Walk: Agudo Subject OE109003'
+        description: Outdoor walk data collection.
+        keywords:
+        - Lisbon
+        - Outdoor
+        - eMOTIONAL Cities
+        - Walk
+        - Microclimate
+        - Biosignals
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_agudo_sub-oe109003
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.131463396
+                - 38.725226777
+                - -9.122959145
+                - 38.726977155
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_agudo_sub-oe109003
+            id_field: id
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_agudo_sub-oe109003/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    new-collection:
+        description: Area Deprivation Index national score in 2020. The Area Deprivation
+            Index (ADI) ranks neighborhoods on the basis of socioeconomic disadvantage
+            in the areas of income, education, employment, and housing quality. Areas
+            with greater disadvantage are ranked higher. National scores are normalized
+            to the whole country, and state scores are normalized to a particular
+            state. Higher Area Deprivation Index scores have been shown to correlate
+            with worse health outcomes in measures such as life expectancy. This index
+            was created by researchers at the University of Wisconsin-Madison based
+            on a methodology originally developed by the Health Resources and Services
+            Administration. Areas on this map are ranked against all other areas in
+            the nation. National scores represent percentiles. In other words, they
+            are divided into 100 groups of the same size, where 1 is the lowest rate
+            of disadvantage and 100 is the highest.
+        extents:
+            spatial:
+                bbox:
+                - -84.61528312089224
+                - 42.655510004126654
+                - -84.49916050045216
+                - 42.769793884562326
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        keywords:
+        - Area Deprivation Index
+        - Lansing
+        - USA
+        - eMOTIONAL Cities
+        links:
+        -   href: https://emotional.byteroad.net/collections/ec_catalog/items/lansing_city_block_group_areadeprivationindex_nationalscore_2020
+            hreflang: en-US
+            rel: canonical
+            title: metadata
+            type: text/html
+        patch_example:
+            extents:
+                spatial:
+                    bbox:
+                    - -84.61528312089224
+                    - 42.655510004126654
+                    - -84.49916050045216
+                    - 42.769793884562326
+                    crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   data: http://elastic_search:9200/lansing_city_block_group_areadeprivationindex_nationalscore_2020
+            id_field: id
+            name: Elasticsearch
+            type: feature
+        -   data: http://elastic_search:9200/lansing_city_block_group_areadeprivationindex_nationalscore_2020/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            format:
+                mimetype: application/vnd.mapbox-vector-tile
+                name: pbf
+            name: MVT-elastic
+            options:
+                zoom:
+                    max: 15
+                    min: 0
+            type: tile
+        title: Area Deprivation Index-National
+        type: collection
+    lansing-new:
+        description: Area Deprivation Index national score in 2020. The Area Deprivation
+            Index (ADI) ranks neighborhoods on the basis of socioeconomic disadvantage
+            in the areas of income, education, employment, and housing quality. Areas
+            with greater disadvantage are ranked higher. National scores are normalized
+            to the whole country, and state scores are normalized to a particular
+            state. Higher Area Deprivation Index scores have been shown to correlate
+            with worse health outcomes in measures such as life expectancy. This index
+            was created by researchers at the University of Wisconsin-Madison based
+            on a methodology originally developed by the Health Resources and Services
+            Administration. Areas on this map are ranked against all other areas in
+            the nation. National scores represent percentiles. In other words, they
+            are divided into 100 groups of the same size, where 1 is the lowest rate
+            of disadvantage and 100 is the highest.
+        extents:
+            spatial:
+                bbox:
+                - -84.61528312089224
+                - 42.655510004126654
+                - -84.49916050045216
+                - 42.769793884562326
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        keywords:
+        - Area Deprivation Index
+        - Lansing
+        - USA
+        - eMOTIONAL Cities
+        links:
+        -   href: https://emotional.byteroad.net/collections/ec_catalog/items/lansing_city_block_group_areadeprivationindex_nationalscore_2020
+            hreflang: en-US
+            rel: canonical
+            title: metadata
+            type: text/html
+        patch_example:
+            extents:
+                spatial:
+                    bbox:
+                    - -84.61528312089224
+                    - 42.655510004126654
+                    - -84.49916050045216
+                    - 42.769793884562326
+                    crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   data: http://elastic_search:9200/lansing_city_block_group_areadeprivationindex_nationalscore_2020
+            id_field: id
+            name: Elasticsearch
+            type: feature
+        -   data: http://elastic_search:9200/lansing_city_block_group_areadeprivationindex_nationalscore_2020/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            format:
+                mimetype: application/vnd.mapbox-vector-tile
+                name: pbf
+            name: MVT-elastic
+            options:
+                zoom:
+                    max: 15
+                    min: 0
+            type: tile
+        title: Area Deprivation Index-National
+        type: collection
+    lisbon_agudo_sub-oe109003_new:
+        type: collection
+        title: 'Lisbon Outdoor Walk: Agudo Subject OE109003 NEW'
+        description: Outdoor walk data collection. NEW
+        keywords:
+        - Lisbon
+        - Outdoor
+        - eMOTIONAL Cities
+        - Walk
+        - Microclimate
+        - Biosignals
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_agudo_sub-oe109003
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -9.131463396
+                - 38.725226777
+                - -9.122959145
+                - 38.726977155
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_agudo_sub-oe109003
+            id_field: id
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_agudo_sub-oe109003/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile
+    test:
+        type: collection
+        title: TESTTTTTTTTTTTTTTTTTTT
+        description: The mapping results of urban health outcomes (Prevalence rates
+            of cardiovascular diseases) in 350m hexagonal grids of Inner London
+        keywords:
+        - urban health
+        - health outcomes
+        - physical health
+        - urban health mapping
+        - inner london
+        - ''
+        links:
+        -   type: text/html
+            rel: canonical
+            title: metadata
+            href: https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_agudo_sub-oe109003
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox:
+                - -0.260765354541958
+                - 51.409628133733456
+                - 0.126720196946648
+                - 51.58003067802845
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+        -   type: feature
+            name: Elasticsearch
+            data: http://elastic_search:9200/lisbon_agudo_sub-oe109003
+            id_field: fid
+        -   type: tile
+            name: MVT-elastic
+            data: http://elastic_search:9200/lisbon_agudo_sub-oe109003/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+            options:
+                zoom:
+                    min: 0
+                    max: 29
+            format:
+                name: pbf
+                mimetype: application/vnd.mapbox-vector-tile

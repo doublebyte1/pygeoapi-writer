@@ -1,0 +1,58 @@
+{
+    "lisbon_agudo_sub-oe109003_new": {
+      "type": "collection",
+      "title": "Lisbon Outdoor Walk: Agudo Subject OE109003 NEW",
+      "description": "Outdoor walk data collection. NEW",
+      "keywords": [
+        "Lisbon",
+        "Outdoor",
+        "eMOTIONAL Cities",
+        "Walk",
+        "Microclimate",
+        "Biosignals"
+      ],
+      "links": [
+        {
+          "type": "text/html",
+          "rel": "canonical",
+          "title": "metadata",
+          "href": "https://emotional.byteroad.net/collections/ec_catalog/items/lisbon_agudo_sub-oe109003",
+          "hreflang": "en-US"
+        }
+      ],
+      "extents": {
+        "spatial": {
+          "bbox": [
+            -9.131463396,
+            38.725226777,
+            -9.122959145,
+            38.726977155
+          ],
+          "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+      },
+      "providers": [
+        {
+          "type": "feature",
+          "name": "Elasticsearch",
+          "data": "http://elastic_search:9200/lisbon_agudo_sub-oe109003",
+          "id_field": "id"
+        },
+        {
+          "type": "tile",
+          "name": "MVT-elastic",
+          "data": "http://elastic_search:9200/lisbon_agudo_sub-oe109003/_mvt/geometry/{z}/{x}/{y}?grid_precision=0",
+          "options": {
+            "zoom": {
+              "min": 0,
+              "max": 29
+            }
+          },
+          "format": {
+            "name": "pbf",
+            "mimetype": "application/vnd.mapbox-vector-tile"
+          }
+        }
+      ]
+    }
+  }
